@@ -1,0 +1,93 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redox_balancer"
+version = "1.0.0"
+description = "NAD+/NADH Redox Balance Optimization using Reinforcement Learning"
+readme = "docs/README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = ["metabolic engineering", "reinforcement learning", "NADH", "redox balance", "IMPALA"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+dependencies = [
+    "cobra>=0.26.0",
+    "gymnasium>=0.29.0",
+    "numpy>=1.21.0",
+    "torch>=2.0.0",
+    "ray>=2.7.0",
+    "pandas>=1.3.0",
+    "matplotlib>=3.5.0",
+    "seaborn>=0.11.0",
+    "tqdm>=4.62.0",
+    "pyyaml>=6.0",
+    "scikit-learn>=1.0.0",
+    "tensorboard>=2.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "ruff>=0.1.0",
+    "mypy>=0.990",
+    "ipykernel>=6.0.0",
+]
+
+aws = [
+    "boto3>=1.26.0",
+    "awscli>=1.27.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/your-org/redox_balancer"
+"Bug Reports" = "https://github.com/your-org/redox_balancer/issues"
+"Source" = "https://github.com/your-org/redox_balancer"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+redox_balancer = ["data/*.json"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+addopts = "-ra -q --strict-markers"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501", "E731"]
+target-version = "py38"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true

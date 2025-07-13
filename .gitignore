@@ -1,0 +1,103 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# Large model files
+data/models/Recon3D_full.json
+data/models/redox_core_v1.json
+data/models/*.xml
+data/models/*.xml.gz
+data/models/*.mat
+data/models/*.h5
+
+# Experiment outputs
+experiments/*/
+ray_results/
+ray_temp/
+ray_spill/
+*.log
+training_*.log
+memory_*.log
+
+# Checkpoints and models
+*.pkl
+*.pth
+*.pt
+*.h5
+*.ckpt
+checkpoint/
+checkpoints/
+
+# Data files
+*.csv
+*.tsv
+*.feather
+*.parquet
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+.cache/
+
+# AWS related
+*.pem
+.aws/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Crash reports and monitoring
+CRASH_REPORT*.md
+memory_leak_analysis.log
+monitor_*.log
+
+# Keep test models and core files
+!data/models/smoke_test_model.json
+!data/models/test_full_model.json
+!data/models/redox_core_v2.json
+!data/models/*.metadata.json
+
+# Keep essential scripts
+!scripts/*.py
+!scripts/*.sh

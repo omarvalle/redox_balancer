@@ -1,0 +1,8 @@
+{
+  "source_model": "data/models/redox_core_v1.json",
+  "source_reactions": 400,
+  "source_metabolites": 727,
+  "core_reactions": 400,
+  "core_metabolites": 727,
+  "target_reactions": 450
+}

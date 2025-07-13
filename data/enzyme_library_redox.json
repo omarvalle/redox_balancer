@@ -1,0 +1,150 @@
+{
+  "enzymes": {
+    "NOX_Ec": {
+      "name": "NADH oxidase from E. coli",
+      "ec_number": "1.6.99.3",
+      "reaction": "NADH + H+ + 0.5 O2 -> NAD+ + H2O",
+      "kcat": 450.0,
+      "km": {
+        "NADH": 0.02,
+        "O2": 0.01
+      },
+      "optimal_pH": 7.0,
+      "temperature_optimum": 37,
+      "compartments": ["c", "m"],
+      "organism": "Escherichia coli",
+      "uniprot_id": "P0A6G7",
+      "notes": "Water-forming NADH oxidase, regenerates NAD+ without producing H2O2"
+    },
+    "NOX_Lb": {
+      "name": "NADH oxidase from Lactobacillus brevis",
+      "ec_number": "1.6.99.3",
+      "reaction": "NADH + H+ + 0.5 O2 -> NAD+ + H2O",
+      "kcat": 350.0,
+      "km": {
+        "NADH": 0.03,
+        "O2": 0.02
+      },
+      "optimal_pH": 6.5,
+      "temperature_optimum": 30,
+      "compartments": ["c"],
+      "organism": "Lactobacillus brevis",
+      "uniprot_id": "Q03V65",
+      "notes": "Highly specific for NADH, no activity with NADPH"
+    },
+    "mAspAT": {
+      "name": "Mitochondrial aspartate aminotransferase",
+      "ec_number": "2.6.1.1",
+      "reaction": "L-aspartate + 2-oxoglutarate <=> oxaloacetate + L-glutamate",
+      "kcat": 1000.0,
+      "km": {
+        "L-aspartate": 0.89,
+        "2-oxoglutarate": 0.14,
+        "oxaloacetate": 0.05,
+        "L-glutamate": 8.4
+      },
+      "optimal_pH": 7.8,
+      "temperature_optimum": 37,
+      "compartments": ["m"],
+      "organism": "Homo sapiens",
+      "uniprot_id": "P00505",
+      "notes": "Key component of malate-aspartate shuttle"
+    },
+    "cAspAT": {
+      "name": "Cytosolic aspartate aminotransferase",
+      "ec_number": "2.6.1.1",
+      "reaction": "L-aspartate + 2-oxoglutarate <=> oxaloacetate + L-glutamate",
+      "kcat": 680.0,
+      "km": {
+        "L-aspartate": 1.2,
+        "2-oxoglutarate": 0.1,
+        "oxaloacetate": 0.04,
+        "L-glutamate": 5.0
+      },
+      "optimal_pH": 7.4,
+      "temperature_optimum": 37,
+      "compartments": ["c"],
+      "organism": "Homo sapiens", 
+      "uniprot_id": "P17174",
+      "notes": "Cytosolic component of malate-aspartate shuttle"
+    },
+    "SLC25A11": {
+      "name": "Mitochondrial 2-oxoglutarate/malate carrier",
+      "ec_number": "2.A.29.2.4",
+      "reaction": "2-oxoglutarate(in) + malate(out) <=> 2-oxoglutarate(out) + malate(in)",
+      "kcat": 150.0,
+      "km": {
+        "2-oxoglutarate": 0.2,
+        "malate": 0.5
+      },
+      "optimal_pH": 7.2,
+      "temperature_optimum": 37,
+      "compartments": ["m"],
+      "organism": "Homo sapiens",
+      "uniprot_id": "Q02978",
+      "notes": "Enables malate-aspartate shuttle by exchanging metabolites"
+    },
+    "SLC25A12": {
+      "name": "Calcium-binding mitochondrial carrier protein Aralar1",
+      "ec_number": "2.A.29.2.5",
+      "reaction": "glutamate(in) + H+(in) + aspartate(out) <=> glutamate(out) + H+(out) + aspartate(in)",
+      "kcat": 200.0,
+      "km": {
+        "glutamate": 0.15,
+        "aspartate": 0.05
+      },
+      "optimal_pH": 7.4,
+      "temperature_optimum": 37,
+      "compartments": ["m"],
+      "organism": "Homo sapiens",
+      "uniprot_id": "O75746",
+      "notes": "Glutamate/aspartate carrier, calcium-regulated"
+    },
+    "MDH1": {
+      "name": "Cytosolic malate dehydrogenase",
+      "ec_number": "1.1.1.37",
+      "reaction": "malate + NAD+ <=> oxaloacetate + NADH + H+",
+      "kcat": 940.0,
+      "km": {
+        "malate": 0.7,
+        "NAD+": 0.09,
+        "oxaloacetate": 0.006,
+        "NADH": 0.02
+      },
+      "optimal_pH": 7.6,
+      "temperature_optimum": 37,
+      "compartments": ["c"],
+      "organism": "Homo sapiens",
+      "uniprot_id": "P40925",
+      "notes": "Cytosolic component for NADH/NAD+ interconversion"
+    },
+    "MDH2": {
+      "name": "Mitochondrial malate dehydrogenase",
+      "ec_number": "1.1.1.37",
+      "reaction": "malate + NAD+ <=> oxaloacetate + NADH + H+",
+      "kcat": 1100.0,
+      "km": {
+        "malate": 0.3,
+        "NAD+": 0.06,
+        "oxaloacetate": 0.003,
+        "NADH": 0.01
+      },
+      "optimal_pH": 7.8,
+      "temperature_optimum": 37,
+      "compartments": ["m"],
+      "organism": "Homo sapiens",
+      "uniprot_id": "P40926",
+      "notes": "Mitochondrial component for NADH regeneration"
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-01-10",
+    "description": "Curated enzyme library for NAD+/NADH redox balance engineering",
+    "target_metabolite": "NADH",
+    "categories": {
+      "oxidases": ["NOX_Ec", "NOX_Lb"],
+      "shuttle_components": ["mAspAT", "cAspAT", "SLC25A11", "SLC25A12", "MDH1", "MDH2"]
+    }
+  }
+}

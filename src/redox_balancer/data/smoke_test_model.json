@@ -1,0 +1,153 @@
+{
+  "id": "smoke_test_redox",
+  "name": "Minimal Redox Test Model",
+  "metabolites": [
+    {"id": "glc_e", "name": "Glucose", "compartment": "e"},
+    {"id": "glc_c", "name": "Glucose", "compartment": "c"},
+    {"id": "g6p_c", "name": "Glucose-6-phosphate", "compartment": "c"},
+    {"id": "pyr_c", "name": "Pyruvate", "compartment": "c"},
+    {"id": "lac_c", "name": "Lactate", "compartment": "c"},
+    {"id": "lac_e", "name": "Lactate", "compartment": "e"},
+    {"id": "nad_c", "name": "NAD+", "compartment": "c"},
+    {"id": "nadh_c", "name": "NADH", "compartment": "c"},
+    {"id": "h_c", "name": "H+", "compartment": "c"},
+    {"id": "atp_c", "name": "ATP", "compartment": "c"},
+    {"id": "adp_c", "name": "ADP", "compartment": "c"},
+    {"id": "pi_c", "name": "Phosphate", "compartment": "c"},
+    {"id": "o2_e", "name": "Oxygen", "compartment": "e"},
+    {"id": "o2_c", "name": "Oxygen", "compartment": "c"},
+    {"id": "h2o_c", "name": "Water", "compartment": "c"},
+    {"id": "biomass", "name": "Biomass", "compartment": "c"}
+  ],
+  "reactions": [
+    {
+      "id": "EX_glc_e",
+      "name": "Glucose exchange",
+      "metabolites": {"glc_e": -1},
+      "lower_bound": -20,
+      "upper_bound": 0
+    },
+    {
+      "id": "GLCt",
+      "name": "Glucose transport",
+      "metabolites": {"glc_e": -1, "glc_c": 1},
+      "lower_bound": -10,
+      "upper_bound": 10
+    },
+    {
+      "id": "HEX",
+      "name": "Hexokinase",
+      "metabolites": {"glc_c": -1, "atp_c": -1, "g6p_c": 1, "adp_c": 1},
+      "lower_bound": 0,
+      "upper_bound": 10
+    },
+    {
+      "id": "GLYC",
+      "name": "Simplified glycolysis",
+      "metabolites": {
+        "g6p_c": -1,
+        "nad_c": -2,
+        "adp_c": -2,
+        "pi_c": -2,
+        "pyr_c": 2,
+        "nadh_c": 2,
+        "h_c": 2,
+        "atp_c": 2
+      },
+      "lower_bound": 0,
+      "upper_bound": 10
+    },
+    {
+      "id": "LDH",
+      "name": "Lactate dehydrogenase",
+      "metabolites": {
+        "pyr_c": -1,
+        "nadh_c": -1,
+        "h_c": -1,
+        "lac_c": 1,
+        "nad_c": 1
+      },
+      "lower_bound": -10,
+      "upper_bound": 10
+    },
+    {
+      "id": "EX_lac_e",
+      "name": "Lactate exchange",
+      "metabolites": {"lac_e": -1},
+      "lower_bound": -10,
+      "upper_bound": 10
+    },
+    {
+      "id": "LACt",
+      "name": "Lactate transport",
+      "metabolites": {"lac_c": -1, "lac_e": 1},
+      "lower_bound": -10,
+      "upper_bound": 10
+    },
+    {
+      "id": "EX_o2_e",
+      "name": "Oxygen exchange",
+      "metabolites": {"o2_e": -1},
+      "lower_bound": -20,
+      "upper_bound": 0
+    },
+    {
+      "id": "O2t",
+      "name": "Oxygen transport",
+      "metabolites": {"o2_e": -1, "o2_c": 1},
+      "lower_bound": -20,
+      "upper_bound": 20
+    },
+    {
+      "id": "BIOMASS",
+      "name": "Biomass production",
+      "metabolites": {
+        "pyr_c": -0.5,
+        "atp_c": -2,
+        "nadh_c": -0.1,
+        "adp_c": 2,
+        "pi_c": 2,
+        "nad_c": 0.1,
+        "biomass": 1
+      },
+      "lower_bound": 0,
+      "upper_bound": 10,
+      "objective_coefficient": 1
+    },
+    {
+      "id": "ATPM",
+      "name": "ATP maintenance",
+      "metabolites": {"atp_c": -1, "adp_c": 1, "pi_c": 1},
+      "lower_bound": 0,
+      "upper_bound": 10
+    },
+    {
+      "id": "EX_nadh_c",
+      "name": "NADH exchange (for testing)",
+      "metabolites": {"nadh_c": -1},
+      "lower_bound": -10,
+      "upper_bound": 10
+    },
+    {
+      "id": "RESP",
+      "name": "Simplified respiration",
+      "metabolites": {
+        "nadh_c": -1,
+        "h_c": -1,
+        "o2_c": -0.5,
+        "nad_c": 1,
+        "h2o_c": 1,
+        "atp_c": 2.5,
+        "adp_c": -2.5,
+        "pi_c": -2.5
+      },
+      "lower_bound": 0,
+      "upper_bound": 20
+    }
+  ],
+  "genes": [],
+  "compartments": {
+    "e": "extracellular",
+    "c": "cytosol"
+  }
+}

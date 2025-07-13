@@ -1,0 +1,8 @@
+{
+  "source_model": "data/models/Recon3D_full.json",
+  "source_reactions": 10600,
+  "source_metabolites": 5835,
+  "core_reactions": 10386,
+  "core_metabolites": 5808,
+  "target_reactions": 600
+}
