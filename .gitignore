@@ -39,13 +39,17 @@ env/
 .ipynb_checkpoints
 *.ipynb
 
-# Large model files
+# Large model files (stored in S3)
 data/models/Recon3D_full.json
 data/models/redox_core_v1.json
 data/models/*.xml
 data/models/*.xml.gz
 data/models/*.mat
 data/models/*.h5
+
+# Downloaded files (can be re-downloaded from S3)
+checkpoints/
+downloaded_*/
 
 # Experiment outputs
 experiments/*/
