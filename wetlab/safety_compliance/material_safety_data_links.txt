@@ -1,0 +1,90 @@
+# Material Safety Data Sheet (MSDS) Links
+
+## Antibiotics
+Kanamycin Sulfate
+https://www.sigmaaldrich.com/US/en/sds/sigma/k1377
+
+Ampicillin Sodium Salt
+https://www.sigmaaldrich.com/US/en/sds/sigma/a9518
+
+## Induction Reagents
+IPTG (Isopropyl β-D-1-thiogalactopyranoside)
+https://www.sigmaaldrich.com/US/en/sds/sigma/i6758
+
+Galactose
+https://www.sigmaaldrich.com/US/en/sds/sigma/g0750
+
+## Cell Culture Reagents
+DMEM (Dulbecco's Modified Eagle Medium)
+https://www.thermofisher.com/document-connect/document-connect.html?url=https://assets.thermofisher.com/TFS-Assets/LSG/SDS/D/DMEM.pdf
+
+Fetal Bovine Serum
+https://www.sigmaaldrich.com/US/en/sds/sigma/f7524
+
+Lipofectamine 3000
+https://www.thermofisher.com/document-connect/document-connect.html?url=https://assets.thermofisher.com/TFS-Assets/LSG/SDS/L/Lipofectamine_3000.pdf
+
+## Extraction/Lysis Reagents
+Triton X-100
+https://www.sigmaaldrich.com/US/en/sds/sigma/t8787
+
+PMSF (Phenylmethylsulfonyl fluoride)
+https://www.sigmaaldrich.com/US/en/sds/sial/p7626
+
+Lysozyme
+https://www.sigmaaldrich.com/US/en/sds/sigma/l6876
+
+## Chromatography Solvents
+Methanol (HPLC Grade)
+https://www.sigmaaldrich.com/US/en/sds/sigald/34860
+
+Acetonitrile (HPLC Grade)
+https://www.sigmaaldrich.com/US/en/sds/sigma/34851
+
+Formic Acid
+https://www.sigmaaldrich.com/US/en/sds/sigma/f0507
+
+## Assay Reagents
+NAD+ (β-Nicotinamide adenine dinucleotide)
+https://www.sigmaaldrich.com/US/en/sds/sigma/n7004
+
+NADH (β-Nicotinamide adenine dinucleotide, reduced)
+https://www.sigmaaldrich.com/US/en/sds/sigma/n8129
+
+WST-1
+https://www.sigmaaldrich.com/US/en/sds/sigma/11644807001
+
+## Disinfectants
+Sodium Hypochlorite (Bleach) 10-15%
+https://www.sigmaaldrich.com/US/en/sds/sigald/239305
+
+Ethanol 70%
+https://www.sigmaaldrich.com/US/en/sds/sigma/e7023
+
+## Cloning Reagents
+BsaI-HF v2 Restriction Enzyme
+https://www.neb.com/protocols/2013/11/27/sds-bsai-hf-v2
+
+T4 DNA Ligase
+https://www.neb.com/protocols/0001/01/01/sds-t4-dna-ligase
+
+## Additional Resources
+OSHA Hazard Communication Standard
+https://www.osha.gov/dsg/hazcom/
+
+NIH Guidelines for Research Involving Recombinant DNA
+https://osp.od.nih.gov/biotechnology/nih-guidelines/
+
+CDC Biosafety in Microbiological Laboratories (BMBL)
+https://www.cdc.gov/labs/BMBL.html
+
+## Emergency Contact Numbers
+Poison Control: 1-800-222-1222
+Chemical Spill: [Institutional number]
+Biosafety Officer: [Institutional contact]
+
+## Notes
+- Always consult most recent MSDS before use
+- Store printed copies in laboratory MSDS binder
+- Review hazards during training
+- Update links annually

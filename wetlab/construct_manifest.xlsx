@@ -1,0 +1,12 @@
+# Enzyme Construct Manifest
+# Note: This is a CSV representation. Convert to Excel format for use.
+
+Construct ID,Enzyme Name,EC Number,Compartment Tag,Copy Number,Vector Backbone,Antibiotic,Expected Size (kDa),Notes
+RB001,NADH oxidase (E. coli),EC 1.6.3.1,c (cytosol),3x,pET28a,Kan,48.5,His-tag N-terminus
+RB002,NADH oxidase (L. brevis),EC 1.6.3.1,m (mitochondria),2x,pET28a,Kan,52.3,CoxIV targeting sequence
+RB003,Malate dehydrogenase MDH1,EC 1.1.1.37,c (cytosol),4x,pYES2,Amp,36.4,Native cytosolic isoform
+RB004,Malate dehydrogenase MDH2,EC 1.1.1.37,m (mitochondria),2x,pYES2,Amp,35.6,Native mitochondrial isoform
+RB005,Aspartate aminotransferase,EC 2.6.1.1,c (cytosol),3x,pET28a,Kan,46.2,Enhanced expression variant
+RB006,Multi-enzyme cassette,Multiple,c+m,1x each,pDuet-1,Amp,Variable,NOX_Ec + MDH1 + AspAT
+RB007,NADH oxidase (E. coli),EC 1.6.3.1,p (peroxisome),2x,pET28a,Kan,51.2,PTS1 targeting sequence
+RB008,Control empty vector,None,None,1x,pET28a,Kan,0,Negative control

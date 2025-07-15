@@ -1,0 +1,37 @@
+# 96-Well Plate Reader Template
+# Save this as a CSV and import to Excel
+
+Plate Layout,1,2,3,4,5,6,7,8,9,10,11,12
+A,Blank,Blank,Blank,Std_1,Std_1,Std_1,Sample_1,Sample_1,Sample_1,Sample_7,Sample_7,Sample_7
+B,Std_2,Std_2,Std_2,Std_3,Std_3,Std_3,Sample_2,Sample_2,Sample_2,Sample_8,Sample_8,Sample_8
+C,Std_4,Std_4,Std_4,Std_5,Std_5,Std_5,Sample_3,Sample_3,Sample_3,Sample_9,Sample_9,Sample_9
+D,Std_6,Std_6,Std_6,Ctrl_Neg,Ctrl_Neg,Ctrl_Neg,Sample_4,Sample_4,Sample_4,Sample_10,Sample_10,Sample_10
+E,Ctrl_Pos,Ctrl_Pos,Ctrl_Pos,QC_1,QC_1,QC_1,Sample_5,Sample_5,Sample_5,Sample_11,Sample_11,Sample_11
+F,QC_2,QC_2,QC_2,QC_3,QC_3,QC_3,Sample_6,Sample_6,Sample_6,Sample_12,Sample_12,Sample_12
+G,,,,,,,,,,,,,
+H,,,,,,,,,,,,,
+
+Standard Concentrations (μM),,,,,,,,,,,
+Std_1,0,,,,,,,,,,
+Std_2,10,,,,,,,,,,
+Std_3,25,,,,,,,,,,
+Std_4,50,,,,,,,,,,
+Std_5,75,,,,,,,,,,
+Std_6,100,,,,,,,,,,
+
+Calculations,,,,,,,,,,,
+Mean Blank,=AVERAGE(A1:C1),,,,,,,,,,
+Std Curve Slope,=SLOPE(standard_abs:standard_conc),,,,,,,,,,
+Std Curve Intercept,=INTERCEPT(standard_abs:standard_conc),,,,,,,,,,
+R-squared,=RSQ(standard_abs:standard_conc),,,,,,,,,,
+
+Sample Calculations,,,,,,,,,,,
+Sample ID,Raw Abs,Blank Corrected,Concentration (μM),Dilution Factor,Final Conc,Units,,,,,
+Sample_1,=AVERAGE(G1:I1),=B20-$B$16,=(C20-$B$18)/$B$17,1,=D20*E20,μM,,,,,
+Sample_2,=AVERAGE(G2:I2),=B21-$B$16,=(C21-$B$18)/$B$17,1,=D21*E21,μM,,,,,
+
+Statistics,,,,,,,,,,,
+Group,Mean,SD,SEM,n,,,,,,
+Control,=AVERAGE(ctrl_values),=STDEV(ctrl_values),=SD/SQRT(n),3,,,,,,
+Treated,=AVERAGE(treated_values),=STDEV(treated_values),=SD/SQRT(n),3,,,,,,
+p-value,=TTEST(ctrl_values:treated_values:2:2),,,,,,,,,

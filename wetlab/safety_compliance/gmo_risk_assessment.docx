@@ -1,0 +1,116 @@
+# Genetically Modified Organism (GMO) Risk Assessment
+
+## Project Information
+**Project Title**: Expression of Redox-Balancing Enzymes for Metabolic Engineering
+**Principal Investigator**: Dr. Omar Farooq
+**Date**: July 14, 2025
+**Biosafety Level**: BSL-1
+
+## GMO Description
+
+### Host Organisms
+1. **E. coli BL21(DE3)** - Risk Group 1, non-pathogenic laboratory strain
+2. **S. cerevisiae BY4741** - Risk Group 1, standard laboratory yeast
+3. **HEK293T** - Risk Group 1, immortalized human cell line
+
+### Genetic Modifications
+- Expression of NADH oxidases from E. coli and L. brevis
+- Expression of malate dehydrogenase isoforms (MDH1/MDH2)
+- Expression of aspartate aminotransferase variants
+- All enzymes are from Risk Group 1 organisms
+- No pathogenicity factors or toxin genes
+
+### Vectors
+- pET28a (kanamycin resistance)
+- pYES2 (ampicillin resistance, URA3 selection)
+- Standard commercial vectors with no mobilization genes
+
+## Risk Assessment
+
+### Hazard Identification
+| Hazard | Risk Level | Mitigation |
+|--------|------------|------------|
+| Antibiotic resistance spread | Low | No conjugative elements; standard lab strains |
+| Environmental release | Very Low | Contained use only; autoclave waste |
+| Human exposure | Very Low | Non-pathogenic hosts; standard PPE |
+| Allergenicity | Very Low | No known allergens; His-tag only modification |
+
+### Environmental Impact
+- Organisms unable to survive outside laboratory conditions
+- No competitive advantage in natural environments
+- Metabolic burden reduces fitness
+- Standard disinfection effective
+
+### Human Health Impact
+- No production of toxins or virulence factors
+- Enzymes involved in normal cellular metabolism
+- No oncogenic potential
+- Standard laboratory safety sufficient
+
+## Containment Measures
+
+### Physical Containment
+- Work conducted in BSL-1 laboratory
+- Biological safety cabinet for aerosol-generating procedures
+- Closed centrifuge tubes
+- No work on open bench with live cultures
+
+### Biological Containment
+- Disabled strains requiring specific nutrients
+- Antibiotic resistance markers for containment
+- No self-transmissible elements
+- Regular contamination monitoring
+
+### Waste Management
+- All biological waste autoclaved at 121°C for 30 min
+- Liquid waste treated with 10% bleach before disposal
+- Contaminated plasticware in biohazard bags
+- Sharps in appropriate containers
+
+## Standard Operating Procedures
+
+### Personal Protective Equipment
+- Lab coat (buttoned, full-length)
+- Gloves (nitrile, changed regularly)
+- Safety glasses when appropriate
+- Closed-toe shoes required
+
+### Work Practices
+- No eating, drinking, or cosmetics in lab
+- Wash hands after work and before leaving
+- Minimize aerosol generation
+- Report all spills immediately
+
+### Emergency Procedures
+1. **Spill Response**:
+   - Alert others in area
+   - Cover with absorbent material
+   - Apply 10% bleach solution
+   - Wait 20 minutes before cleanup
+
+2. **Exposure Response**:
+   - Skin: Wash with soap and water
+   - Eyes: Flush 15 minutes at eyewash
+   - Ingestion: Do not induce vomiting, seek medical attention
+   - Report to PI and biosafety officer
+
+## Training Requirements
+- General biosafety training completed
+- GMO-specific training documented
+- Annual refresher required
+- New personnel supervised until competent
+
+## Regulatory Compliance
+- Complies with NIH Guidelines for Recombinant DNA
+- Registered with Institutional Biosafety Committee
+- No human gene therapy or germline modification
+- No deliberate environmental release
+
+## Declaration
+I certify that this risk assessment accurately describes the proposed work and that all personnel will comply with the containment and safety measures described.
+
+**Signature**: _________________________ **Date**: _____________
+Dr. Omar Farooq, Principal Investigator
+
+**IBC Approval**: ______________________ **Date**: _____________
+Institutional Biosafety Committee Chair
